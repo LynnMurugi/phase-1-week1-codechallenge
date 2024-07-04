@@ -1,33 +1,36 @@
 // gradeGenerator.js
-const readline = require('readline');
-const rl = readline.createInterface({
-    input : process.stdin,
-    output:process.stdout
-});
+const prompt = require('prompt-sync')() 
+let marks = Number(prompt("Enter your marks:"));
 function getGrade (marks){
-    const marksNum = parseFloat(marks,10);
+    const marksNum = parseFloat(marks);
 if (isNaN (marksNum)||marksNum < 0 || marksNum > 100){
-    console.log("Enter valid marks.")
-return;}
+    return("Enter valid marks.")
+   }else if (marksNum  >= 79.0){
+    return`grade = A!`;
+    }else if (marksNum <79 && marksNum >= 60.0){
+         return `grade = B!`;
+    }else if (marksNum < 60 && marksNum >= 49.0){ 
+        return `grade = C!`;
+    }
+    else {
+         return`grade = E!`;
+    }
 
-let grade;
 
-if (marksNum >= 79.0){
-    grade = 'A'
+//let grade;
+
+//if (marksNum >= 79.0){
+  //  grade = 'A'
+//}
+//else if (marksNum >= 60.0){
+  //  grade = 'B'
+//}
+//else if (marksNum >= 49.0){
+  //  grade = 'C'
+//}
+///else{
+   // grade = 'E'
+//}
 }
-else if (marksNum >= 60.0){
-    grade = 'B'
-}
-else if (marksNum >= 49.0){
-    grade = 'C'
-}
-else{
-    grade = 'E'
-}
- 
-console.log(`You got ${marksNum} which is ${grade}.`);
-}
-rl.question('Enter marks between (0 - 100): ', (answer) => {
-    getGrade(answer);
-    rl.close();
-});
+console.log(getGrade(marks));
+

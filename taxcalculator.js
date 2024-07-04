@@ -1,13 +1,11 @@
-const readline = require('readline');
-const rl = readline.createInterface({
-    input :process.stdin,
-    output : process.stdout
-}) ;
+const prompt = require('prompt-sync')();
+let grossSalary = Number(prompt("Enter your salary")) ;
+//arrow function
  const paye = (grossSalary) =>{
     if (grossSalary <= 24000){
         return 0.1;
     }
-    else {
+      else {
         return 0.3;
     }
  }
@@ -49,8 +47,4 @@ const rl = readline.createInterface({
 const salary = (grossSalary) => {
     console.log(grossSalary- (grossSalary*paye(grossSalary)) - nssfDeductions - nhifDeductions(grossSalary))
 }
-
-rl.question('Enter your gross salary(basic salary + benefits) ', (answer) => {
-    salary(answer);
-    rl.close();
-});
+salary(grossSalary)
