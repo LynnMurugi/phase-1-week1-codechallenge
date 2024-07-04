@@ -23,19 +23,4 @@ const base_speed = 70
  }
  console.log(speedlimit(speed));
 
-//const speedrange = 70;
-//const kmPerDemeritPoint = 5;
 
-//if(speedNum <= speedrange){
-  //   console.log("ok");
-//}
-//else {
-  //  const demeritPoints = Math.floor((speedNum - speedrange) / kmPerDemeritPoint);
-    //if(demeritPoints > 12){
-      //  console.log ("license suspended");
-    //}
-    //else{
-      //  console.log(`DemeritPoint is ${demeritPoints}`);
-    //}
-//}
- //}

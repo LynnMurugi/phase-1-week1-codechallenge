@@ -15,22 +15,6 @@ if (isNaN (marksNum)||marksNum < 0 || marksNum > 100){
     else {
          return`grade = E!`;
     }
-
-
-//let grade;
-
-//if (marksNum >= 79.0){
-  //  grade = 'A'
-//}
-//else if (marksNum >= 60.0){
-  //  grade = 'B'
-//}
-//else if (marksNum >= 49.0){
-  //  grade = 'C'
-//}
-///else{
-   // grade = 'E'
-//}
 }
 console.log(getGrade(marks));
 
